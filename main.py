@@ -583,7 +583,8 @@ def process_pairs(message, pairs, secret_code):
 
     # Mark the process as complete after processing all pairs
     user_hits[user_id]['process_complete'] = True
-    bot.reply_to(message, f"Processing complete. Enter `/gethits {secret_code}` to retrieve your hits one final time.")
+    bot.reply_to(message, bot.reply_to(message, f"Processing complete. Enter `/gethits {secret_code}` to retrieve your hits one final time.", parse_mode="Markdown")
+
 
 # Example usage in /crunchy and /mcrunchy commands
 @bot.message_handler(commands=['crunchy'])
@@ -615,7 +616,8 @@ def handle_mcrunchy(message):
             email_pass_pairs = file.decode('utf-8').strip().splitlines()
             
             # Start processing the pairs
-            bot.reply_to(message, f"Processing started. Use `/gethits {secret_code}` to get your hits at any time.")
+            bot.reply_to(message, bot.reply_to(message, f"Processing complete. Enter `/gethits {secret_code}` to retrieve your hits one final time.", parse_mode="Markdown")
+)
             process_pairs(message, email_pass_pairs, secret_code)
 
         except Exception as e:
@@ -649,7 +651,7 @@ def get_hits_command(message):
         if len(hits) > 0:
             if len(hits) < 10:
                 # Send hits as a message if fewer than 10
-                bot.reply_to(message, f"Here are your hits (Hits - {len(hits)}):\n" + "\n".join(hits) + "\n\nNote: This is not the final result.")
+                bot.reply_to(message, f"Here are your crunchyroll hits (Hits - {len(hits)}):\n" + "\n".join(hits) + "\n\nNote: This is not the final result.")
             else:
                 # Send hits as a file if 10 or more
                 filename = f"hits_{secret_code}.txt"
