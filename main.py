@@ -617,7 +617,7 @@ def handle_mcrunchy(message):
             
             # Start processing the pairs
             bot.reply_to(message, f"Processing complete. Enter `/gethits {secret_code}` to retrieve your hits one final time.", parse_mode="Markdown")
-)
+
             process_pairs(message, email_pass_pairs, secret_code)
 
         except Exception as e:
