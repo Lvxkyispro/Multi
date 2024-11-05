@@ -583,7 +583,7 @@ def process_pairs(message, pairs, secret_code):
 
     # Mark the process as complete after processing all pairs
     user_hits[user_id]['process_complete'] = True
-    bot.reply_to(message, bot.reply_to(message, f"Processing complete. Enter `/gethits {secret_code}` to retrieve your hits one final time.", parse_mode="Markdown")
+    bot.reply_to(message, bot.reply_to(message, f"Processing complete. Enter `/gethits {secret_code}` to retrieve your hits one final time."
 
 
 # Example usage in /crunchy and /mcrunchy commands
@@ -616,10 +616,7 @@ def handle_mcrunchy(message):
             email_pass_pairs = file.decode('utf-8').strip().splitlines()
             
             # Start processing the pairs
-            bot.reply_to(message, bot.reply_to(message, f"Processing complete. Enter `/gethits {secret_code}` to retrieve your hits one final time.", parse_mode="Markdown")
-)
-            process_pairs(message, email_pass_pairs, secret_code)
-
+            bot.reply_to(message, bot.reply_to(message, f"Processing complete. Enter `/gethits {secret_code}` to retrieve your hits one final time."
         except Exception as e:
             bot.reply_to(message, f"Failed to process file: {str(e)}")
     else:
@@ -662,7 +659,7 @@ def get_hits_command(message):
                     bot.send_document(
                         message.chat.id, 
                         file, 
-                        caption=f"Hits retrieved\nHits - {len(hits)}\nNote: This is not the final result"
+                        caption=f"Crunchyroll Hits retrieved\nHits - {len(hits)}\nNote: This is not the final result"
                     )
                 os.remove(filename)  # Delete the file after sending
         else:
