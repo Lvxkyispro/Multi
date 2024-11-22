@@ -1,3 +1,14 @@
-pyTelegramBotAPI
-requests
+aiohttp==3.8.5
+beautifulsoup4==4.12.2
+deep-translator==1.11.4
+google-api-python-client==2.108.0
+html2text==2024.2.26
+Pillow==10.0.0
+pyTelegramBotAPI==4.14.0
+python-dotenv==1.0.0
+requests==2.31.0
+telegram==0.0.1
+translate==3.6.1
+wikipedia==1.4.0
+
 
