@@ -13,7 +13,7 @@ import html
 import sys
 
 # Replace 'YOUR_BOT_TOKEN' with your actual Telegram bot token
-bot_token = '7560925100:AAHPBCKPip4ef7pL8pN0rhXue2Mabdv3T4E'
+bot_token = '{token}'
 bot = telebot.TeleBot(bot_token)
 
 @bot.message_handler(commands=['start'])
