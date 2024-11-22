@@ -942,8 +942,8 @@ def search_images(message):
         "cx": SEARCH_ENGINE_ID,
         "q": user_query,
         "searchType": "image",
-        "num": 4,          # Number of images to fetch
-        "safe": "active"   # Enable SafeSearch
+        "num": 5,          # Number of images to fetch
+        "safe": "off"   # Enable SafeSearch
     }
 
     try:
