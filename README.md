@@ -1,169 +1,35 @@
- Multi-Purpose Telegram Bot
 
+1. Core Functionalities
+/start Command**: Welcomes users, introduces the bot, and mentions available commands.
+/cmds Command**: Lists all available commands in the bot, providing a clear overview of what users can do.
+/reset Command**: Restart the bot during runtime.
 
-https://www.python.org/
-LICENSE
-https://core.telegram.org/bots
-CONTRIBUTING.md
+2. Generating and Cleaning BINs/Credit Cards
+/gbin Command**: Generates random BINs. It ensures BINs are well-formatted and limits requests to avoid excessive API usage.
+/gen Command**: Generates valid credit card numbers using a given BIN, including expiry date and CVV, while validating them with the Luhn algorithm.
+/clean Command**: Processes text files containing credit card data and reformats them into the standard cc|mm|yy|cvv format.
+BIN Lookup**: Fetches detailed information about BIN numbers, like country, scheme, and bank.
 
-🚀 About the Project
+3. File Utilities
+/merge Command**: Allows multiple .txt files to be uploaded for merging.
+/split Command**: Splits an uploaded .txt file into equal parts based on user input.
+/aflt Command**: Filters email:password format pairs from uploaded .txt files.
 
-Multi-Purpose Telegram Bot is a flexible and feature-rich bot built in Python. From generating BINs and managing credit card-related data to performing Google searches and image lookups, the bot offers various tools to assist users. It is easy to set up, extend, and customize!
+4. Proxies and IP Tools
+/px Command**: Validates proxy availability and retrieves its IP information.
+/ip Command**: Fetches details about an IP address, including location, organization, and security flags like VPN/Proxy/TOR indicators.
 
-This bot caters to multiple purposes, including:
-🌐 Internet tools (search queries, Wikipedia, and image lookups)
-💳 Card-related tasks (BIN lookup, card generation, cleaning data)
-📁 File operations (merging, splitting, filtering)
-🎨 AI and image generation
-📡 Account and proxy management tools
+5. Crunchyroll Checker
+/crunchy and /mcrunchy Commands**: Checks Crunchyroll account credentials (email:password) for validity and subscription status. Results are stored temporarily and retrievable via a unique secret code (/gethits).
+Provides detailed stats about total, good, premium, and bad accounts using inline keyboards to display progress.
 
-💡 Features
+6. Advanced Media Tools
+/ai Command**: Sends queries to an AI image generation API and returns the generated image.
+/img Command**: Searches and retrieves up to 5 images using Google’s Custom Search API.
+/data Command**: Fetches detailed information about a person (using Wikipedia or Google Search) alongside an image.
+/search Command**: Performs Google search for user queries or fetches Wikipedia summaries for provided terms.
 
-🛠️ Core Functionalities
-
-💳 Card & BIN Utilities
-/bin : Perform BIN lookups to get detailed card issuer data (type, country, etc.)
-/gbin : Generate random BIN numbers
-/gen : Generate valid cards based on a BIN
-/gb  : Get random brand-specific BINs
-/clean: Format and validate stolen card dumps
-
-🔍 Internet Tools
-/search : Perform Google searches
-/wiki : Lookup topics directly from Wikipedia
-/ip : Get location and information tied to an IP address
-/img : Return relevant images from free APIs
-
-🎨 AI Features
-/ai : Generate AI-created custom images based on the specified prompt
-
-📁 File Utilities
-/merge: Combine multiple text files into one
-/split : Divide large files into chunks of size n
-/aflt: Filter sensitive combinations like email:pass files.
-
-🔐 Proxy and Authentication
-/crunchy: Crunchyroll account verification
-/px : Test proxies for security and speed
-
-💻 Installation & Setup
-
-Prerequisites
-Python 3.8+
-A valid https://core.telegram.org/bots
-Optional: A Google API key (for /search, /img, etc.)
-Clone the repo:
- bash
-  git clone https://github.com/lvxkyispro/multi.git
-  cd multi
-  
-Installation Steps
-Install dependencies:
-  bash
-   pip install -r requirements.txt
-   Create an .env file in the root directory:
-  bash
-   BOT_TOKEN=your_telegram_bot_token
-   GOOGLE_API_KEY=your_google_api_key
-   SEARCH_ENGINE_ID=your_search_engine_id
-   Run the bot:
-  bash
-   python bot.py
-   
-🔨 Usage Examples
-
-BIN Lookupshell
-Command:
-/bin 123456
-
-Result:
-🔍 BIN Lookup
-💳 BIN: 123456
-📋 Type: VISA
-📍 Country: United States 🇺🇸
-🏦 Bank: Chase
-
-Generate Cardsshell
-Command:
-/gen 123456
-
-Result:
-🔖 Generated Cards:
-💳 1234 5678 9101 1121 | 12 | 25 | 123
-💳 1234 5678 9101 3456 | 01 | 26 | 222
-
-Perform a Google Searchshell
-Command:
-/search Python programming
-
-Result:
-🌐 Search Results for: Python programming
-1️⃣ Title: What is Python?
-📝 Description: Python is a popular programming language.
-🔗 Link: https://example.com/python
-
-2️⃣ Title: Learn Python in 30 Days
-📝 Description: Step-by-step tutorials to learn Python.
-🔗 Link: https://example.com/learn-python
-
-AI Image Generationshell
-Command:
-/ai cyberpunk city at night
-
-Result:
-🎨 Generating AI image...
-[You will receive the generated image file.]
-
-📋 Commands Reference Sheet
-
-| Command       | Description                                  |
-|---------------|----------------------------------------------|
-| /start      | Start the bot and get a welcome message      |
-| /cmds       | Get a list of all commands                   |
-| /bin        | Perform a BIN lookup                        |
-| /gen        | Generate cards                              |
-| /gbin       | Generate random BIN numbers                 |
-| /wiki       | Search Wikipedia                            |
-| /ip         | Fetch IP address details                    |
-| /px         | Proxy tester                                |
-| /search     | Perform a Google search                     |
-| /ai         | AI image generation                         |
-| /merge      | Combine multiple text files                 |
-| /split      | Split a file                                |
-
-🎯 Roadmap
-
-Add more card-related tools and integrations.
-Introduce features for gaming APIs.
-Implement Telegram inline queries for faster searches.
-Improve search result formatting and relevance.
-
-🛡️ Security Features
-
-Input validation to ensure clean and safe data processing
-Rate limiting to prevent abuse of commands
-Enforces command usage limits to avoid resource overloading
-Full error handling and clear notifications when something goes wrong
-
-🤝 Contributing
-
-We welcome contributions to make the bot even more powerful! Follow these steps to contribute:
-
-Fork the repository.
-Create a new branch for your feature (git checkout -b feature/new-feature).
-Commit your changes (git commit -m 'Add new feature').
-Push your branch (git push origin feature/new-feature).
-Submit a pull request. 🙌
-
-📜 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-📞 Contact
-
-Need support or have questions? Feel free to reach out:
-🤖 https://t.me/yourchannel
-🐦 https://twitter.com/yourprofile
-✉️ Email us at: your-email@example.com
-
-Made with ❤️ by https://github.com/lvxkyispro
+7. User Interaction and Custom Features
+Inline keyboard buttons dynamically show stats or custom actions for users during operations.
+Stop functionality using /stop: Stops ongoing processes and clears temporary data for the user.
+Validation and error-handling mechanisms ensure proper user input and provide meaningful responses in case of missteps.
