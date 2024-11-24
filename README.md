@@ -36,3 +36,9 @@ A versatile Telegram bot with multiple features for card checking, BIN lookup, i
 
 ```bash
 pip install -r requirements.txt
+
+## ⚙️ Configuration
+- Replace the following tokens in the code:
+- Bot Token: {token}
+- Google API Key
+- Search Engine ID
