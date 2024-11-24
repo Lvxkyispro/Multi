@@ -96,11 +96,11 @@ pip install -r requirements.txt
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=flat&logo=telegram&logoColor=white)](https://t.me/kiltes)
 
 
-##📝 License
+## 📝 License
 
 This project is licensed under the MIT License.
 
-##🤝 Contributing
+## 🤝 Contributing
 
 - Fork the repository
 - Create your feature branch:
@@ -115,8 +115,6 @@ git commit -m 'Add some feature'
 ```bash
 git push origin feature/YourFeature
 ```
-- Create a Pull Request
 
-##📞 Support
-
-For support, join our [Telegram Channel] (https://t.me/madtripx)
+## Credits 
+- [Luckyxd](https://t.me/kiltes) for everything
