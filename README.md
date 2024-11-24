@@ -42,17 +42,11 @@ python3 pro.py
 ```
 ## ⚙️ Configuration
 
-- Create a .env file in the root directory:
+- Edit the following things in config.py file:
 ```bash
 BOT_TOKEN=your_telegram_bot_token
 GOOGLE_API_KEY=your_google_api_key
 SEARCH_ENGINE_ID=your_search_engine_id
-```
-- Update the tokens in the code:
-```bash
-bot_token = 'your_telegram_bot_token'
-GOOGLE_API_KEY = 'your_google_api_key'
-SEARCH_ENGINE_ID = 'your_search_engine_id'
 ```
 ## 📦 Dependencies
 ```bash
