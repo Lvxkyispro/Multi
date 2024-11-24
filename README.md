@@ -32,14 +32,11 @@ A versatile Telegram bot with multiple features for card checking, BIN lookup, i
 - `/search` - Web search
 - `/cmds` - List all commands
 
-## 🚀 Installation
+## 🚀 Setup 
 
 ```bash
+git clone https://github.com/lvxkyispro/multi.git
+cd multi
 pip install -r requirements.txt
+python3 pro.py
 ```
-
-## ⚙️ Configuration
-- Replace the following tokens in the code:
-- Bot Token: {token}
-- Google API Key
-- Search Engine ID
