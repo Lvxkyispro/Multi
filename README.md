@@ -1,150 +1,71 @@
+# 🌟 Multi-Purpose Telegram Bot
 
-🤖 Multi-Purpose Telegram Bot
+<p align="center">
+  <img src="https://i.imgur.com/ojgXrso.png" alt="Bot Logo" width="150"/>
+</p>
 
-A versatile Telegram bot built with Python that offers various utilities including BIN checking, card generation, file operations, search functionality, and more.
+<div align="center">
 
-🌟 Key Features
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)  
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)  
+[![Telegram Bot API](https://img.shields.io/badge/Telegram-Bot%20API-blue)](https://core.telegram.org/bots)  
+[![Contributions welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen)](CONTRIBUTING.md)
 
-💳 Card & Payment Tools
-/bin  - Check BIN information
-/gbin  - Generate random BINs (max 100)
-/gen  - Generate valid cards from BIN
-/gb   - Generate brand-specific BINs
-/clean - Format and clean credit card data
+</div>
 
-📁 File Operations
-/merge - Combine multiple text files
-/split  - Split text files into parts
-/aflt - Filter email:pass combinations
-/txt  - Create text files
+---
 
-🔍 Search & Information
-/search  - Google search
-/data  - Get detailed information
-/wiki  - Wikipedia search
-/ip  - IP address lookup
-/img  - Image search
+## 🚀 About the Project
 
-🎨 AI Features
-/ai  - Generate AI images
+**Multi-Purpose Telegram Bot** is a flexible and feature-rich bot built in Python. From generating BINs and managing credit card-related data to performing Google searches and image lookups, the bot offers various tools to assist users. It is easy to set up, extend, and customize!  
 
-🔐 Account Checking
-/crunchy - Check Crunchyroll accounts
-/mcrunchy - Bulk check Crunchyroll accounts
-/px - Check proxy status
+This bot caters to multiple purposes, including:
+- 🌐 Internet tools (search queries, Wikipedia, and image lookups)
+- 💳 Card-related tasks (BIN lookup, card generation, cleaning data)
+- 📁 File operations (merging, splitting, filtering)
+- 🎨 AI and image generation
+- 📡 Account and proxy management tools  
 
-🛠️ Installation
+---
 
-Clone the repository:bash
-git clone
+## 💡 Features
 
-Install required packages:bash
-pip install -r requirements.txt
+### 🛠️ Core Functionalities
 
-Configure environment variables:env
-BOT_TOKEN=your_telegram_bot_token
-GOOGLE_API_KEY=your_google_api_key
-SEARCH_ENGINE_ID=your_search_engine_id
-IPINFO_TOKEN=your_ipinfo_token
+#### 💳 Card & BIN Utilities
+- `/bin <number>`: Perform **BIN lookups** to get detailed card issuer data (type, country, etc.)
+- `/gbin <amount>`: Generate random **BIN numbers**
+- `/gen <bin>`: Generate valid cards based on a **BIN**
+- `/gb <brand> <amount>`: Get random **brand-specific BINs**
+- `/clean`: Format and validate stolen card dumps
 
-📋 Dependencies
-python-telegram-bot
-requests
-wikipedia-api
-google-api-python-client
+#### 🔍 Internet Tools
+- `/search <query>`: Perform **Google searches**
+- `/wiki <query>`: Lookup topics directly from **Wikipedia**
+- `/ip <address>`: Get location and information tied to an **IP address**
+- `/img <query>`: Return relevant images from free APIs
 
-🚀 Usage
+#### 🎨 AI Features
+- `/ai <prompt>`: Generate AI-created custom images based on the specified prompt
 
-Start the bot:bash
-python pro.py
+#### 📁 File Utilities
+- `/merge`: Combine multiple text files into one
+- `/split <n>`: Divide large files into chunks of size `n`
+- `/aflt`: Filter sensitive combinations like email:pass files.
 
-In Telegram, start a chat with the bot using the /start command
+#### 🔐 Proxy and Authentication
+- `/crunchy`: Crunchyroll **account verification**
+- `/px <connection>`: Test proxies for security and speed 
 
-💡 Command Examples
+---
 
-BIN Lookup
-/bin 123456
+## 💻 Installation & Setup
 
-Generate Cards
-/gen 123456
-
-Search Images
-/img nature sunset
-
-Generate AI Image
-/ai cyberpunk city at night
-
-🔒 Security Features
-Rate limiting on certain commands
-Maximum limits for bulk operations
-Error handling for invalid inputs
-Secure file handling
-
-🔄 Process Management
-/reset - Restart the bot
-/ping - Check bot status
-Stop functionality for long-running processes
-
-⚠️ Important Notes
-API rate limits apply
-Some features require specific API keys
-File operations have size limitations
-Temporary files are automatically cleaned up
-
-🛡️ Error Handling
-Input validation
-API error handling
-File operation safeguards
-Network request timeouts
-
-🔧 Maintenance
-Regular cleanup of temporary files
-Process monitoring
-Resource usage optimization
-
-👨‍💻 Development
-Written in Python 3.x
-Modular code structure
-Extensive error handling
-Clean code practices
-
-📝 License
-MIT License
-
-Copyright (c) 2024 lucky
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE. 
-
-🤝 Contributing
-Fork the repository
-Create a feature branch
-Commit changes
-Push to the branch
-Create a pull request
-
-🙏 Credits
-Telegram Bot API
-Google Custom Search API
-IPInfo API
-Various open-source libraries
-
-📞 Support
-For support, join our Telegram channel or create an issue in the repository.
-
-Made with ❤️ by [Your Name]
+### Prerequisites
+- Python 3.8+
+- A valid [Telegram Bot API key](https://core.telegram.org/bots)  
+- Optional: A Google API key (for `/search`, `/img`, etc.)  
+- Clone the repo:
+  ```bash
+  git clone https://github.com/lvxkyispro/multi.git
+  cd multi
