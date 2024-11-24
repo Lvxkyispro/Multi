@@ -40,3 +40,83 @@ cd multi
 pip install -r requirements.txt
 python3 pro.py
 ```
+## ⚙️ Configuration
+
+- Create a .env file in the root directory:
+```bash
+BOT_TOKEN=your_telegram_bot_token
+GOOGLE_API_KEY=your_google_api_key
+SEARCH_ENGINE_ID=your_search_engine_id
+```
+- Update the tokens in the code:
+```bash
+bot_token = 'your_telegram_bot_token'
+GOOGLE_API_KEY = 'your_google_api_key'
+SEARCH_ENGINE_ID = 'your_search_engine_id'
+```
+## 📦 Dependencies
+```bash
+telebot==4.0.0
+requests==2.26.0
+wikipedia==1.4.0
+google-api-python-client==2.0.0
+python-dotenv==0.19.0
+```
+## 🔒 Usage
+
+- Set up your environment variables
+Run the bot:
+```bash
+python pro.py
+```
+## 🚨 Error Handling
+
+- If you encounter any errors:
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt --force-reinstall
+```
+## 📝 Example Configuration
+```bash
+config.py
+TOKEN = "your_bot_token_here"
+ADMIN_ID = your_admin_id
+```
+## 🔄 Regular Updates
+
+- To update the bot:
+```bash
+git pull origin main
+pip install -r requirements.txt
+```
+## 👨‍💻 Developer
+- [Follow me on Telegram](https://t.me/kiltes)
+- [telegram]: https://t.me/santinochat
+## 📱 Social Media
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=flat&logo=telegram&logoColor=white)](https://t.me/kiltes)
+
+
+##📝 License
+
+This project is licensed under the MIT License.
+
+##🤝 Contributing
+
+- Fork the repository
+- Create your feature branch:
+```bash
+git checkout -b feature/YourFeature
+```
+- Commit your changes:
+```bash
+git commit -m 'Add some feature'
+```
+- Push to the branch:
+```bash
+git push origin feature/YourFeature
+```
+- Create a Pull Request
+
+##📞 Support
+
+For support, join our [Telegram Channel] (https://t.me/madtripx)
