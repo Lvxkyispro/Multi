@@ -44,9 +44,11 @@ python3 pro.py
 
 - Edit the following things in config.py file:
 ```bash
-BOT_TOKEN=your_telegram_bot_token
-GOOGLE_API_KEY=your_google_api_key
-SEARCH_ENGINE_ID=your_search_engine_id
+BOT_TOKEN = 'BOT TOKEN'  
+BOT_USERNAME = 'YourBotUsername'
+GOOGLE_API_KEY = "GOOGLE API KEY"
+SEARCH_ENGINE_ID = "SEARCH ENGINE ID"
+IPINFO_TOKEN = "IPINFO.IO API TOKEN"
 ```
 ## 📦 Dependencies
 ```bash
