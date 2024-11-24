@@ -1251,47 +1251,7 @@ def handle_search(message):
 
 
     bot.reply_to(message, help_text)
-    @bot.message_handler(commands=['broadcast'])
-def broadcast_command(message):
-Check if user is admin (you should implement proper admin verification)
-    admin_ids = [6652287427]  # Replace with actual admin IDs
-    if message.from_user.id not in admin_ids:
-        bot.reply_to(message, "⚠️ You are not authorized to use this command.")
-        return
-
-Check if message is a reply
-    if not message.reply_to_message:
-        bot.reply_to(message, "⚠️ Please reply to the message you want to broadcast.")
-        return
-
-Get the message to broadcast
-    broadcast_msg = message.reply_to_message.text
-
-Send initial status message
-    status_msg = bot.reply_to(message, f"🔄 Broadcasting message to {len(users_db)} users...")
-
-Counter for successful/failed sends
-    success = 0
-    failed = 0
-
-Broadcast the message
-    for user_id in users_db:
-        try:
-            bot.send_message(user_id, f"📢 Broadcast Message:\n\n{broadcast_msg}")
-            success += 1
-        except Exception as e:
-            failed += 1
-            continue
-
-Update status message with final count
-    bot.edit_message_text(
-        f"✅ Broadcast completed!\n\n"
-        f"Successfully sent: {success}\n"
-        f"Failed: {failed}",
-        chat_id=status_msg.chat.id,
-        message_id=status_msg.message_id
-)
-
+    
 def main():
     print("Bot started...")
     bot.infinity_polling()
